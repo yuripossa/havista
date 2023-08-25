@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--As lihas abaixo são referentes aos links dos arquivos .js e .css-->
+    <!--Links inseridos por Yuri Possa em 21/08/2023 em atendimento ao chamado da aula de programação-->
+    <link href="estilo.css"></link>
+    <script src="compras.js"></script>
+    <!--Fim dos links dos arquivos .js e .css-->
+    <title>Carrinho de Compras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--As tags links e scripts abaixo são referentes ao Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Fim do Bootstrap-->
+    
+    <!--As linhas abaixo são referentes ao JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <center>
+    <table class="table table-dark table-hover">
+        <!--Esta primeira linha da tabela é referente ao cabeçalho da tabela-->
+        <tr>
+            <th>Produto</th>
+            <th>Descrição do Produto</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade</th>
+            <th>Preço Total</th>
+        </tr>
+        <!--As próximas 3 linhas são referente aos produtos-->
+        <tr>
+            <th><img src="imagens/shampoo.png" width="100"></th>
+            <td>Shampoo Feminino</td>
+            <td>R$ 25,00</td>
+            <td><input type="number" onclick="calcularP1()" id="Q1"></td>
+            <td><div id="totalProduto1">R$</div></td>
+        </tr>
+        <tr>
+            <th><img src="imagens/perfumefeminino.png" width="100"></th>
+            <td>Perfume Feminino</td>
+            <td>R$ 400,00</td>
+            <td><input type="number" onclick="calcularP2()" id="Q2"></td>
+            <td><div id="totalProduto2">R$</div></td>
+        </tr>
+        <tr>
+            <th><img src="imagens/perfumemasculino.png" width="100"></th>
+            <td>Perfume Feminino</td>
+            <td>R$ 200,00</td>
+            <td><input type="number" onclick="calcularP3()" id="Q3"></td>
+            <td><div id="totalProduto3">R$</div></td>
+        </tr>
+    </table>
+    <br>
+    <a href="#">
+        <div id="flip"> <!--Div para ação com JQuery - alterdo por Yuri no dia 21/08/2023-->
+            <button type="button" class="btn btn-primary">Forma de pagamento</button>
+        </div>
+    </a>
+    <br><br>
+    <div id="panel">
+     <table class="table table-dark table-hover">
+        <!--Esta primeira linha da tabela é referente ao cabeçalho da tabela-->
+        <tr>
+            <td colspan="5">
+                Escolha a Forma de Pagamento
+            </td>
+        </tr>
+        <tr>
+            <th>Produto</th>
+            <th>Descrição do Produto</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade</th>
+            <th>Preço Total</th>
+        </tr>
+        <!--As próximas 3 linhas são referente aos produtos-->
+        <a href="#">
+            <button type="button" class="btn btn-primary" onclick="alert('Compra realizada com sucesso');">Finalizar Compra</button>
+        </a>
+      </table>
+      <br>
+      
+    </div>
+    </center>
+</div>
+</body>
+</html>
